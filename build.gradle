@@ -1,0 +1,20 @@
+apply plugin: 'groovy'
+apply plugin: 'idea'
+
+repositories {
+    mavenCentral()
+}
+
+idea {
+    project {
+        jdkName = '1.7'
+        languageLevel = '1.7'
+    }
+}
+
+dependencies {
+    groovy 'org.codehaus.groovy:groovy-all:2.1.9'
+    compile 'com.google.guava:guava:15.0'
+    compile 'org.codehaus.gpars:gpars:1.1.0-rc1'
+    testCompile "org.spockframework:spock-core:0.7-groovy-2.0"
+}
